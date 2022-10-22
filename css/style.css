@@ -230,7 +230,7 @@
 .content__text {
   font-family: "TTLakes";
   font-weight: normal;
-  font-size: 14px;
+  font-size: 0.88rem;
   padding: 16px;
   padding-top: 0px;
   color: #1b1c21;
@@ -257,7 +257,6 @@
   font-size: 1rem;
   padding-bottom: 16px;
   cursor: default;
-
   position: relative;
 }
 
@@ -271,20 +270,13 @@
   content: url("img/highlight.svg");
   position: absolute;
   left: 0;
-
-
 }
-
-
-
 .repair {
   position: relative;
 }
-
 .button--size-screen--big {
   display: none;
 }
-
 .main-header__label {
   min-width: 140px;
   font-family: "TTLakes";
@@ -299,7 +291,8 @@
 .read-more__button::before {
   content: url("img/icon.svg");
   position: absolute;
-  left: 5vw;
+  left: 4vw;
+  top: -2px;
 
 }
 
@@ -319,8 +312,7 @@
 .content-text__text {
   max-width: 100%;
   padding: 0 3.2vw 1.7vw 5vw;
-  align-self: center;
-  font-size: 14px;
+  font-size: 0.88rem;
 }
 
 .content-text {
@@ -330,12 +322,9 @@
   justify-content: flex-start;
 }
 
-
-
 @media (min-width: 280px) and (max-width: 768px) {
   .content-text__text--size-screen--medium {
     display: none;
-
   }
 
   .content__text--size-screen--big {
@@ -363,7 +352,6 @@
 
   .content {
     flex-direction: column;
-
   }
 
   .slide-menu__button {
@@ -427,7 +415,11 @@
   .main {
     margin-top: 42px;
   }
-
+  .read-more__button::before {
+    left: 5vw;
+    top: -2px;
+  
+  }
   .button--size-screen--big {
     display: block;
   }
