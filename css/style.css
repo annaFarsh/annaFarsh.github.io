@@ -29,7 +29,6 @@
     url("TTLakes/TTLakes-Bold.woff") format("woff"),
     url("TTLakes/TTLakes-Bold.ttf") format("truetype");
 }
-
 .header {
   display: flex;
   flex-direction: row;
@@ -42,88 +41,87 @@
   background-color: white;
   background-size: cover;
 }
-
 .menu-logo {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: inherit;
 }
-
 .right-part-header {
   background-color: inherit;
 }
-
 .menu-logo > * {
   background-color: inherit;
 }
-
 .right-part-header > * {
   background-color: inherit;
 }
-
 .button {
   border-style: none;
   background-color: white;
 }
-
 .right-part-header {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
-.logo__image {
+.logo {
   margin-left: 5vw;
   background-color: inherit;
 }
-
-.menu-logo__button {
-  background-image: url("img/burger.svg");
+.menu__button {
   width: 40px;
   height: 40px;
   margin-left: 5vw;
   background-color: inherit;
 }
-
+.button--menu {
+  background-image: url("img/burger.svg");
+}
 .repair__button {
-  background-image: url("img/repair.svg");
   width: 40px;
   height: 40px;
   margin-right: 16px;
   background-color: inherit;
 }
-
+.button--repair {
+  background-image: url("img/repair.svg");
+}
 .checkstatus__button {
+  width: 40px;
+  height: 40px;
+  margin-right: 5vw;
+  background-color: inherit;
+}
+.button--checkstatus {
   background-image: url("img/checkstatus.svg");
-  width: 40px;
-  height: 40px;
-  margin-right: 5vw;
-  background-color: inherit;
 }
-
 .call__button {
+  width: 40px;
+  height: 40px;
+  margin-right: 2.5vw;
+  background-color: inherit;
+}
+.button--call {
   background-image: url("img/call.svg");
-  width: 40px;
-  height: 40px;
-  margin-right: 2.5vw;
-  background-color: inherit;
 }
-
 .chat__button {
-  background-image: url("img/chat.svg");
   width: 40px;
   height: 40px;
   margin-right: 2.5vw;
   background-color: inherit;
 }
-
+.button--chat {
+  background-image: url("img/chat.svg");
+}
 .profile__button {
-  background-image: url("img/profile.svg");
   width: 40px;
   height: 40px;
   margin-right: 5vw;
   background-color: inherit;
+}
+.button--profile {
+  background-image: url("img/profile.svg");
 }
 
 .header::before {
@@ -165,7 +163,7 @@
   align-items: center;
 }
 
-.main-h1__h1 {
+.main-header__h1 {
   font-family: "TT Lakes Bold";
   font-size: 1.75rem;
   font-weight: bold;
@@ -188,23 +186,30 @@
 }
 
 .slide-menu__button {
+  list-style: none;
+  background-color: #f8f8f8;
+}
+.slide-menu__button > a {
+  text-decoration: none;
+  background-color: #f8f8f8;
+  color: #7e7e82;
   font-family: "TT Lakes Medium";
   font-weight: 500;
   font-size: 1rem;
   letter-spacing: -0.2px;
-  color: #7e7e82;
-  padding: 0 1rem 0 1rem;
-  background-color: #f8f8f8;
+  padding: 0.7rem;
 }
 
-.slide-menu__button_active {
+.slide-menu__button--active > a {
   border-style: solid;
   border-color: #b8ffec;
   background-color: white;
   border-width: 2px;
   border-radius: 6px;
 }
-
+.slide-menu__button--active > a {
+  background-color: white;
+}
 .content {
   position: relative;
   display: flex;
@@ -223,7 +228,7 @@
   line-height: 20px;
 }
 
-.main-h1__h1::before {
+.main-header__h1::before {
   content: url("img/highlight.svg");
   position: absolute;
   left: 0;
@@ -302,7 +307,6 @@
 
   .slide-menu {
     width: calc(100% - 10vw);
-
     height: 40px;
     flex-wrap: nowrap;
     overflow: hidden;

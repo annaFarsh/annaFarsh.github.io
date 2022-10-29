@@ -12,32 +12,34 @@
     <!--Блок header-->
     <header class="header">
       <div class="menu-logo">
-        <menu class="menu-logo__menu">
-          <button class="menu-logo__button button"></button>
+        <menu class="menu">
+          <button class="menu__button button button--menu"></button>
         </menu>
-        <img class="logo__image" src="css/img/logo.svg" />
+        <img class="logo" src="css/img/logo.svg" />
       </div>
       <div class="right-part-header">
         <div class="call">
           <button
-            class="call__button button--size-screen--medium button"
+            class="call__button button button--call button--size-screen--medium"
           ></button>
         </div>
         <div class="chat">
           <button
-            class="chat__button button--size-screen--medium button"
+            class="chat__button button button--chat button--size-screen--medium"
           ></button>
         </div>
         <div class="profile">
           <button
-            class="profile__button button--size-screen--medium button"
+            class="profile__button button button--size-screen--medium button--profile"
           ></button>
         </div>
         <div class="repair header-repair">
-          <button class="repair__button button"></button>
+          <button class="repair__button button button--repair"></button>
         </div>
         <div class="checkstatus">
-          <button class="checkstatus__button button"></button>
+          <button
+            class="checkstatus__button button button--checkstatus"
+          ></button>
         </div>
       </div>
     </header>
@@ -45,7 +47,7 @@
     <!--Блок main-->
     <main class="main">
       <div class="main-header">
-        <h1 class="main-h1__h1">Услуги и сервисы</h1>
+        <h1 class="main-header__h1">Услуги и сервисы</h1>
 
         <label
           class="main-header__label"
@@ -56,7 +58,7 @@
           <label
             ><input
               type="button"
-              class="repair__button button button--size-screen--big repair__button--size-screen--big"
+              class="repair__button button--repair button button--size-screen--big repair__button--size-screen--big"
             />
           </label>
         </div>
@@ -70,23 +72,34 @@
           <label
             ><input
               type="button"
-              class="checkstatus__button button button--size-screen--big checkstatus__button--size-screen--big"
+              class="checkstatus__button button button--checkstatus button--size-screen--big checkstatus__button--size-screen--big"
           /></label>
         </div>
       </div>
-      
-      <div class="slide-menu">
-        <button class="slide-menu__button slide-menu__button_active button">
-          Ремонтируемые устройства
-        </button>
-        <button class="slide-menu__button button">Дополнительные услуги</button>
-        <button class="slide-menu__button button">Цены на услуги</button>
-        <button class="slide-menu__button button">
-          Адреса сервисных центров
-        </button>
-        <button class="slide-menu__button button">Специальные цены</button>
-        <button class="slide-menu__button button">Отзывы</button>
-      </div>
+      <!--Навигация-->
+      <nav>
+        <ul class="slide-menu">
+          <li class="slide-menu__button slide-menu__button--active button">
+            <a href="#">Ремонтируемые устройства</a>
+          </li>
+          <li class="slide-menu__button button">
+            <a href="#">Дополнительные услуги</a>
+          </li>
+          <li class="slide-menu__button button">
+            <a href="#">Цены на услуги</a>
+          </li>
+          <li class="slide-menu__button button">
+            <a href="#"> Адреса сервисных центров</a>
+          </li>
+          <li class="slide-menu__button button">
+            <a href="#">Специальные цены</a>
+          </li>
+          <li class="slide-menu__button button">
+            <a href="#">Отзывы</a>
+          </li>
+        </ul>
+      </nav>
+
       <div class="content">
         <div class="content-text">
           <p class="content-text__text">

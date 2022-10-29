@@ -45,17 +45,24 @@
   border-style: none;
   background-color: white;
 }
-.menu-mobile__close-button {
-  background-image: url("img/burger-close.svg");
+.menu-mobile__button {
   width: 40px;
   height: 40px;
   margin-left: 5vw;
+  margin: 23px 0 37px 24px;
   background-color: inherit;
 }
+.button--close {
+  background-image: url("img/burger-close.svg");
+}
 .search__button {
-  background-image: url("img/search.svg");
+  margin: 23px 24px 37px 0;
+  background-color: inherit;
   width: 40px;
   height: 40px;
+}
+.button--search {
+  background-image: url("img/search.svg");
 }
 .header-mobile {
   display: flex;
@@ -82,13 +89,6 @@
 .menu-mobile {
   position: relative;
 }
-.menu-mobile__close-button {
-  margin: 23px 0 37px 24px;
-}
-.search__button {
-  margin: 23px 24px 37px 0;
-  background-color: inherit;
-}
 .wrapper-mobile {
   box-sizing: border-box;
   box-shadow: 0px 0px 30px 2px rgb(154, 156, 158);
@@ -96,33 +96,38 @@
   flex-direction: column;
   height: 100%;
 }
-.call-mobile__button {
+.call > .call__button {
+  width: 40px;
+  height: 40px;
+  margin-right: 2.5vw;
+  background-color: inherit;
+}
+.button--call {
   background-image: url("img/call.svg");
+}
+.chat > .chat__button {
   width: 40px;
   height: 40px;
   margin-right: 2.5vw;
   background-color: inherit;
 }
-.chat-mobile__button {
+.button--chat {
   background-image: url("img/chat.svg");
+}
+.profile__button {
   width: 40px;
   height: 40px;
   margin-right: 2.5vw;
   background-color: inherit;
 }
-.profile-mobile__button {
+.button--profile {
   background-image: url("img/profile.svg");
-  width: 40px;
-  height: 40px;
-  margin-right: 2.5vw;
-  background-color: inherit;
 }
-.bottom-buttons {
+.footer-buttons {
   display: flex;
   flex-direction: row;
   margin-left: 24px;
 }
-
 .languages {
   list-style: none;
   display: flex;
