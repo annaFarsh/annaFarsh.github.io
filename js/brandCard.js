@@ -78,7 +78,7 @@ function changeSizeScreenBig(hideButtonCheck, media1120px) {
 function changeSizeScreenMedium(hideButtonCheck, media767px) {
   if (media767px && !hideButtonCheck) {
     currentArray = brandCards.slice(0, 6);
-    console.log(currentArray);
+    generationCards();
   } else if (media767px && hideButtonCheck) {
     currentArray = brandCards.slice(0, 8);
     generationCards();

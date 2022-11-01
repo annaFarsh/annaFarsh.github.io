@@ -80,6 +80,7 @@
   max-width: calc(240px - 4vw);
   padding: 16px 20px;
   border: solid 1px #eaeaea;
+  border-radius: 6px;
   background-color: #ffffff;
 }
 .lenovo--logo {
