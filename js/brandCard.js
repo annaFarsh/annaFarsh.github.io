@@ -4,60 +4,82 @@ let brandCards = [
   {
     name: "lenovo",
     link: "#",
+    image: "../css/img-slider-of-brands/Lenovo.png",
+    imageWidth: "108px",
+    imageHeight: "32px",
+    alt: "Логотип Леново",
   },
   {
     name: "samsung",
     link: "#",
+    image: "../css/img-slider-of-brands/Samsung.png",
+    imageWidth: "116px",
+    imageHeight: "38.5px",
+    alt: "Логотип Самсунг",
   },
   {
     name: "apple",
     link: "#",
+    image: "../css/img-slider-of-brands/Apple.png",
+    imageWidth: "44px",
+    imageHeight: "44px",
+    alt: "Логотип Эппл",
   },
   {
     name: "view-sonic",
     link: "#",
+    image: "../css/img-slider-of-brands/ViewSonic.png",
+    imageWidth: "128px",
+    imageHeight: "21px",
+    alt: "Логотип Вью Соник",
   },
   {
     name: "bosch",
     link: "#",
+    image: "../css/img-slider-of-brands/Bosch.png",
+    imageWidth: "128px",
+    imageHeight: "28.6px",
+    alt: "Логотип Бош",
   },
   {
     name: "hp",
     link: "#",
+    image: "../css/img-slider-of-brands/HP.png",
+    imageWidth: "52px",
+    imageHeight: "52px",
+    alt: "Логотип Эйч Пи",
   },
   {
     name: "acer",
     link: "#",
+    image: "../css/img-slider-of-brands/Acer.png",
+    imageWidth: "94px",
+    imageHeight: "24px",
+    alt: "Логотип Эйсер",
   },
   {
     name: "sony",
     link: "#",
+    image: "../css/img-slider-of-brands/Sony.png",
+    imageWidth: "128px",
+    imageHeight: "26.6px",
+    alt: "Логотип Сони",
   },
 ];
-//функция, чтоб элементы проще делать
-let makeElement = function (tagName, className, text) {
-  let element = document.createElement(tagName);
-  element.classList.add(className);
-  if (text) {
-    element.textContent = text;
-  }
-  return element;
-};
 
 //был ли клик на кнопку "показать все"? вешаю событие на клик, добавляю/удаляю класс hide__button
-let showAllButton = document.querySelector(".show-all__button");
+let showAllButton = document.querySelector(".show-all");
 showAllButton.addEventListener("click", function () {
-  showAllButton.classList.toggle("hide__button");
+  showAllButton.classList.toggle("hide");
   changeSizeScreenBig(hideButtonCheck(), media1120px.matches);
   changeSizeScreenMedium(hideButtonCheck(), media767px.matches);
 });
 //напишу функцию, которая чекает наличие класса hide__button
 function hideButtonCheck() {
-  return document.querySelector(".hide__button")
-    ? ((document.querySelector(".hide__button").innerText = "Скрыть"), true)
-    : ((document.querySelector(".show-all__button").innerText = "Показать все"),
-      false);
-};
+  return document.querySelector(".hide")
+    ? ((document.querySelector(".hide").innerText = "Скрыть"), true)
+    : ((document.querySelector(".show-all").innerText = "Показать все"), false);
+}
 //меняю массив в зависимости от экрана
 let media1120px = window.matchMedia("(min-width: 1120px)");
 let media767px = window.matchMedia(
@@ -109,17 +131,14 @@ new Swiper(".swiper", {
 
 //ищу див, в который вставлю карточки
 let brandsDiv = document.querySelector(".brands");
-
+let swiperWrapper = document.querySelector(".swiper-wrapper");
 //функция генерации карточек для мобилок
 let brandCard = "";
 function generationCardsforMobile() {
-  let swiperWrapper = document.querySelector(".swiper-wrapper");
-
   brandCards.forEach((card) => {
-    return (brandCard += `<div class="swiper-slide cards-slider"><section class="section">
- <div class="section__${card.name} ${card.name}--logo"></div>
- <a href="${card.link}" class="section__button button"></a>
-</section></div>`);
+    return (brandCard += `<div class="swiper-slide cards-slider"><a href=${card.link} class="section">
+ <img src=${card.image} alt=${card.alt} width=${card.imageWidth} height=${card.imageHeight}>
+ <div class="section__button button"><div class="pointer"></div></div></a></div>`);
   });
   swiperWrapper.innerHTML = brandCard;
 }
@@ -128,10 +147,9 @@ function generationCardsforMobile() {
 function generationCards() {
   brandCard = "";
   currentArray.forEach((card) => {
-    return (brandCard += `<section class="section">
-    <div class="section__${card.name} ${card.name}--logo"></div>
-    <a href="${card.link}" class="section__button button"></a>
-  </section>`);
+    return (brandCard += `<a href=${card.link} class="section">
+ <img src=${card.image} alt=${card.alt} width=${card.imageWidth} height=${card.imageHeight}>
+ <div class="section__button button"><div class="pointer"></div></div></a>`);
   });
   //вставляю карточку в див
   brandsDiv.innerHTML = brandCard;
