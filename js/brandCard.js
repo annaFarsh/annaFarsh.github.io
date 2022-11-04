@@ -67,14 +67,14 @@ let brandCards = [
   },
 ];
 
-//был ли клик на кнопку "показать все"? вешаю событие на клик, добавляю/удаляю класс hide__button
+//был ли клик на кнопку "показать все"? вешаю событие на клик, добавляю/удаляю класс hide
 let showAllButton = document.querySelector(".show-all");
 showAllButton.addEventListener("click", function () {
   showAllButton.classList.toggle("hide");
   changeSizeScreenBig(hideButtonCheck(), media1120px.matches);
   changeSizeScreenMedium(hideButtonCheck(), media767px.matches);
 });
-//напишу функцию, которая чекает наличие класса hide__button
+//напишу функцию, которая чекает наличие класса hide
 function hideButtonCheck() {
   return document.querySelector(".hide")
     ? ((document.querySelector(".hide").innerText = "Скрыть"), true)
